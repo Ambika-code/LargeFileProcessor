@@ -1,0 +1,50 @@
+Large File Processor
+
+Programming language -  Python
+
+Database - MYSQL
+
+Installation:
+
+Installed MySQl Workbench(For Storing db) and Sublime text(For Python code compilation)
+
+Lets Start!
+
+Sample rows
+
+Name                              Sku                                                                  Description
+
+Bryce Jones	lay-raise-best-end	Art community floor adult your single type. Per back community former stock thing.
+Roger Huerta	citizen-some-middle	Important fight wrong position fine. Friend song interview glass pay. Organization possible just.
+John Buckley	term-important	"Alone maybe education risk despite way.
+Anthony Burch	anyone-executive	I lose positive manage reason option. Crime structure space both traditional teacher that.
+
+Python Database connectivity is used here.
+
+SQL DB and Python code is connected using mysql connector
+
+Implementation
+1. There is a mysql DB server  has the ProductDatabase, having a mysql table ProductTable and the 
+ProductAggregation for ProductTable on the Names column is carried out.
+2.  Large file processor is used as a docker where Product data file to be ingested.
+3.  Create the users, grant permissions, create Product data base ,ProductTable inside it and a ProductAggregation view,
+Spin up LargeFileProcessor, which takes the Product csv file as an input and processes it,Prints the state of the ProductTable and 
+ProductAggregation.
+
+LargeFileProcessor can have 3 components : Product data registrar,Product Data ingestion manager,Product data aggregator and its manager,Driver 
+Driver initializes the DB accessing, Product Registrar, Product Data ingestion manager and Calls.
+
+Steps to run code:
+
+Run Python code while mysql is connected to the server 
+
+Future Improvements:
+
+1. ProductAggregate in mysql view has more data,so we will have to move it to big data or other solutions.
+2. Update Product table and  Aggregation table.
+3. Handling failures occured during ingestion and aggregation.
+
+
+
+
+
